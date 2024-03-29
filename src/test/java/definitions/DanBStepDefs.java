@@ -65,12 +65,10 @@ public class DanBStepDefs {
             case "Last name" -> fieldXpath = "//input[@id='last_name']";
             case "working_hours.monday.from" -> fieldXpath = "//input[@id='working_hours.monday.from']";
             case "working_hours.monday.to" -> fieldXpath = "//input[@id='working_hours.monday.to']";
-            default -> {
-                System.out.println("Field " + TextFieldName + " not found");
-            }
+            default -> System.out.println("Field " + TextFieldName + " not found");
 
         }
-        ;
+
         getDriver().findElement(By.xpath(fieldXpath)).sendKeys(value);
     }
 
@@ -92,11 +90,10 @@ public class DanBStepDefs {
             case "Calvin Grant" -> actualXpath = adminAccountName;
             case "FirstnameSelenium LastNameSelenium" -> actualXpath = NewSpesialist;
             case "Are you sure you want to remove this specialist?" -> actualXpath = popUpremovalConfirm;
-            default -> {
-                System.out.println("Confirmation text '" + text + "' not found");
-            }
+            default -> System.out.println("Confirmation text '" + text + "' not found");
+
         }
-        ;
+
         assertThat(getDriver().findElement(By.xpath(actualXpath)).isDisplayed()).isTrue();
     }
 
