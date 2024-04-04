@@ -1,4 +1,4 @@
-@medicenter @regression @createSpecialist
+@medicenter @regression @create_delete_specialist
 Feature: Medicenter Testing Scenarios Selenium WebDriver methods
 
   Background:
