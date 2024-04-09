@@ -3,7 +3,7 @@
 #This test scenarios for different types of logins
 @medicenter
 Feature: Login to Medical Center
-
+@smoke
   Scenario: Login as administrator
 
     Given I open url "https://medicenter-qa2.vercel.app/"
@@ -20,7 +20,7 @@ Feature: Login to Medical Center
     #And I wait for 2 sec
     Then I click on element with xpath "//button[text()='Logout']"
     Then I wait for element with xpath "//button[contains(text(),'Login')]" to be present
-
+@smoke
   Scenario: Login as patient
     Given I open url "https://medicenter-qa2.vercel.app/"
     Then I click on element with xpath "//button[contains(text(),'Login')]"
@@ -42,7 +42,7 @@ Feature: Login to Medical Center
 
 
 
-
+@datadriven
   Scenario Outline: Login as patient data driven scenario
     Given I open url "https://medicenter-qa2.vercel.app/"
     Then I click on element with xpath "//button[contains(text(),'Login')]"
