@@ -1,10 +1,10 @@
-@medicenter @regression @create_delete_specialist
+@medicenter @regression
 Feature: Medicenter Testing Scenarios Selenium WebDriver methods
 
   Background:
     When Dan open url  "https://medicenter-qa2.vercel.app/"
     Then Dan click "Login" button
-
+@logIn_as_specialist
   Scenario: LogIn Selenium WebDriver methods
 
     Then I type "patient2@gmail.com" to "email" field
@@ -15,6 +15,7 @@ Feature: Medicenter Testing Scenarios Selenium WebDriver methods
 
 
 #FEB-267
+  @create_delete_specialist
   Scenario: As an administrator I can add new specialist
     Then I type "administrator2@gmail.com" to "email" field
     Then I type "abc123" to "password" field
