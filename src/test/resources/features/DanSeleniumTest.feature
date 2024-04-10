@@ -4,7 +4,7 @@ Feature: Medicenter Testing Scenarios Selenium WebDriver methods
   Background:
     When Dan open url  "https://medicenter-qa2.vercel.app/"
     Then Dan click "Login" button
-@logIn_as_specialist
+@logIn_as_patient
   Scenario: LogIn Selenium WebDriver methods
 
     Then I type "patient2@gmail.com" to "email" field

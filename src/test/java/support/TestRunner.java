@@ -11,8 +11,8 @@ import org.junit.runner.RunWith;
         plugin = {"pretty", "html:target/report.html", "json:target/report.json"},
         features = "src/test/resources/features",
         glue = {"definitions", "support"},
-        tags = "@create_delete_specialist" // same as VM option -Dcucumber..filter.tags="@predefined1 or @predefined2"
-      //  tags = "@smoke or @medicenter or @regression or @create_delete_specialist"
+        //tags = "@create_delete_specialist" // same as VM option -Dcucumber..filter.tags="@predefined1 or @predefined2"
+        tags = "@smoke or @medicenter or @regression or @create_delete_specialist"
 )
 public class TestRunner {
     @BeforeClass
